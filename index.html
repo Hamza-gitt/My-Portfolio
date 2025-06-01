@@ -1,40 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hamza - DevOps & Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Outfit', sans-serif; background: #0a0a23; color: #fff; scroll-behavior: smooth; }
-    a { text-decoration: none; color: inherit; }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: #111129; box-shadow: 0 2px 8px rgba(0,0,0,0.4); position: sticky; top: 0; z-index: 10; }
-    header .logo { font-size: 1.6rem; font-weight: 700; color: #8f5eff; }
-    nav ul { display: flex; list-style: none; gap: 2rem; }
-    nav ul li a:hover { color: #8f5eff; }
-    .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 8% 10%; background: linear-gradient(145deg, #0a0a23, #111129); }
-    .hero-text { max-width: 500px; }
-    .hero-text h1 { font-size: 3rem; line-height: 1.3; }
-    .hero-text h1 span, #typed { color: #8f5eff; font-weight: bold; }
-    .hero-text p { font-size: 1.1rem; color: #aaa; margin: 1rem 0; }
-    .hero img { width: 40%; max-width: 400px; animation: float 3s ease-in-out infinite; }
-    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    section { padding: 4rem 10%; }
-    section h2 { font-size: 2rem; margin-bottom: 1.5rem; color: #8f5eff; }
-    .about p, .experience-item p { max-width: 700px; color: #ccc; line-height: 1.6; }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-    .skills-grid div, .project { background: #1a1a3c; padding: 1rem; text-align: center; border-radius: 10px; transition: 0.3s ease; }
-    .skills-grid div:hover, .project:hover { background: #23235d; transform: translateY(-5px); }
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .experience-item { border-left: 3px solid #8f5eff; padding-left: 1.5rem; margin-bottom: 1.5rem; }
-    .contact form { display: flex; flex-direction: column; gap: 1rem; }
-    .contact input, .contact textarea { padding: 0.8rem; background: #1a1a3c; border: none; border-radius: 6px; color: white; resize: vertical; }
-    .contact button { background: #8f5eff; border: none; padding: 0.8rem 1.5rem; border-radius: 6px; color: white; cursor: pointer; }
-    footer { text-align: center; padding: 1rem; background: #111129; font-size: 0.9rem; color: #777; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #0a0a23;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background: #111129;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    header .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #8f5eff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a:hover {
+      color: #8f5eff;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8% 10%;
+      background: linear-gradient(145deg, #0a0a23, #111129);
+      gap: 2rem;
+    }
+
+    .hero-text {
+      max-width: 500px;
+      flex: 1 1 300px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.3;
+    }
+
+    .hero-text h1 span,
+    #typed {
+      color: #8f5eff;
+      font-weight: bold;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin: 1rem 0;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 400px;
+      flex: 1 1 250px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    section {
+      padding: 4rem 10%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #8f5eff;
+    }
+
+    .about p,
+    .experience-item p {
+      max-width: 700px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .skills-grid div,
+    .project {
+      background: #1a1a3c;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .skills-grid div:hover,
+    .project:hover {
+      background: #23235d;
+      transform: translateY(-5px);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .experience-item {
+      border-left: 3px solid #8f5eff;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 0.8rem;
+      background: #1a1a3c;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      resize: vertical;
+    }
+
+    .contact button {
+      background: #8f5eff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111129;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* ----------- RESPONSIVE RULES ----------- */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        padding-top: 1rem;
+      }
+
+      section {
+        padding: 2rem 5%;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -67,47 +267,51 @@
   <section class="skills" id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div>HTML & CSS</div><div>JavaScript</div><div>React.js</div><div>Node.js</div>
-      <div>Docker</div><div>Git & GitHub</div><div>AWS</div><div>CI/CD</div>
+      <div>HTML & CSS</div>
+      <div>JavaScript</div>
+      <div>React.js</div>
+      <div>Node.js</div>
+      <div>Docker</div>
+      <div>Git & GitHub</div>
+      <div>AWS</div>
+      <div>CI/CD</div>
     </div>
   </section>
 
   <section class="projects" id="projects">
     <h2>Projects</h2>
-
     <div class="project">
-      <h3>Personal Assistant </h3>
-      <p>
-        A Python-based desktop assistant with voice commands for 
-        messaging, reminders, grammar checks, pronunciation, weather, and web search. 
-      </p>
+      <h3>Personal Assistant</h3>
+      <p>A Python-based desktop assistant with voice commands for messaging, reminders, grammar checks, pronunciation, weather, and web search.</p>
     </div>
-
-     <div class="project">
+    <div class="project">
       <h3>Hospital Management System</h3>
-      <p>
-        A Hospital Management System to input patient details, generate 
-        prescriptions, reduce errors, and improve efficiency and record-keeping. 
-      </p>
+      <p>A system to input patient details, generate prescriptions, reduce errors, and improve efficiency and record-keeping.</p>
     </div>
-
-     <div class="project">
-      <h3>Feedstock Optimizer </h3>
-      <p>
-        Analyzed biofuel feedstock collection using computational models, 
-        addressing logistics, environmental impact, costs, and efficiency with tools like Pyomo. 
-      </p>
+    <div class="project">
+      <h3>Feedstock Optimizer</h3>
+      <p>Analyzed biofuel feedstock collection using computational models, addressing logistics, environmental impact, and efficiency using Pyomo.</p>
     </div>
-
-     
   </section>
 
   <section class="experience" id="experience">
     <h2>Certifications</h2>
-    <div class="experience-item"><h3>NVIDIA</h3><p>Fundamentals of Deep Learning.</p></div>
-    <div class="experience-item"><h3>CISCO</h3><p>Intro to Cybersecurity</p></div>
-    <div class="experience-item"><h3>CISCO</h3><p>Python Essentials 1</p></div>
-    <div class="experience-item"><h3>CISCO</h3><p>Python Essentials 2</p></div>
+    <div class="experience-item">
+      <h3>NVIDIA</h3>
+      <p>Fundamentals of Deep Learning.</p>
+    </div>
+    <div class="experience-item">
+      <h3>CISCO</h3>
+      <p>Intro to Cybersecurity</p>
+    </div>
+    <div class="experience-item">
+      <h3>CISCO</h3>
+      <p>Python Essentials 1</p>
+    </div>
+    <div class="experience-item">
+      <h3>CISCO</h3>
+      <p>Python Essentials 2</p>
+    </div>
   </section>
 
   <section class="contact" id="contact">
@@ -132,4 +336,5 @@
   </script>
 
 </body>
+
 </html>
