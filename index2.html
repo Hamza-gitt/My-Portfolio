@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamza - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Hamza</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h1>Hi, I'm Hamza</h1>
+            <h2><span id="typed-text"></span></h2>
+            <p>I build elegant and efficient user interfaces and love turning ideas into reality.</p>
+            <a href="public/documents/Resume.pdf" download class="resume-btn">Download Resume</a>
+            <div class="social-links">
+                <a href="https://github.com/Hamza-gitt" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/hamza-510701250/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <img src="public/images/rpng.png" alt="Hamza" class="hero-img" />
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+
+            <p>
+                I’m a frontend developer passionate about clean design, responsive websites, and user-first experiences.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+
+
+
+        </div>
+    </section>
+
+    <!-- Additional Projects Section -->
+    <section class="projects more-projects">
+
+        <div class="project">
+            <h3>Portfolio</h3>
+            <p>My personal portfolio built from scratch.</p>
+        </div>
+
+        <div class="project">
+
+            <h3>NETFLIX</h3>
+            <p color>Netflix - Website Clone done with HTML & CSS.</p>
+        </div>
+        <div class="project">
+            <h3>Personal Assistant</h3>
+            <p>A Python-based desktop assistant with voice commands for messaging, reminders, grammar checks,
+                pronunciation,
+                weather, and web search.</p>
+        </div>
+        <div class="project">
+            <h3>Hospital Management System</h3>
+            <p>A system to input patient details, generate prescriptions, reduce errors, and improve efficiency and
+                record-keeping.</p>
+        </div>
+        <div class="project">
+            <h3>Feedstock Optimizer</h3>
+            <p>Analyzed biofuel feedstock collection using computational models, addressing logistics, environmental
+                impact,
+                and efficiency using Pyomo.</p>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="experience" id="experience">
+        <h2>Certifications</h2>
+        <div class="experience-item">
+            <h3>NVIDIA</h3>
+            <p>Fundamentals of Deep Learning.</p>
+        </div>
+        <div class="experience-item">
+            <h3>CISCO</h3>
+            <p>Introduction to Networks</p>
+        </div>
+        <div class="experience-item">
+            <h3>CISCO</h3>
+            <p>Python Essentials 1</p>
+        </div>
+        <div class="experience-item">
+            <h3>CISCO</h3>
+            <p>Python Essentials 2</p>
+        </div>
+
+        <div class="experience-item">
+            <h3>CISCO</h3>
+            <p>Introduction to Cybersecurity</p>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <button id="topBtn" title="Go to top">↑</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

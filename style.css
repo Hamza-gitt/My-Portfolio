@@ -1,0 +1,390 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #0a0a23;
+  color: white;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+body.light-mode header,
+body.light-mode #about,
+body.light-mode #projects,
+body.light-mode #contact {
+  background-color: white;
+  color: #222;
+}
+
+body.light-mode .about-content p {
+  color: #333;
+}
+
+body.light-mode .project-card,
+body.light-mode form input,
+body.light-mode form textarea {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+body.light-mode .project-card h3 {
+  color: #222;
+}
+
+body.light-mode .project-card p {
+  color: #555;
+}
+
+body.light-mode .more-projects {
+  background-color: #ffffff;
+  color: #222;
+}
+
+body.light-mode .more-projects .project {
+  background-color: #f2f2f2;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .more-projects .project h3 {
+  color: #8f5eff;
+}
+
+body.light-mode .more-projects .project p {
+  color: #444;
+}
+
+body.light-mode .experience {
+  background-color: #ffffff;
+  color: #222;
+}
+
+body.light-mode .experience-item {
+  background-color: #f2f2f2;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .experience-item h3 {
+  color: #8f5eff;
+}
+
+body.light-mode .experience-item p {
+  color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  background: #111129;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8f5eff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header nav a:hover {
+  color: #8f5eff;
+}
+
+.theme-btn {
+  background: none;
+  border: 2px solid #8f5eff;
+  color: #8f5eff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: #8f5eff;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+  color: #8f5eff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px #8f5eff80;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #8f5eff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: #a983ff;
+}
+
+.social-links a {
+  margin-right: 15px;
+  color: #8f5eff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+#about, #projects, #contact {
+  padding: 4rem 10%;
+}
+
+#about h2, #projects h2, #contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8f5eff;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content img {
+  width: 250px;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px #8f5eff80;
+}
+
+.about-content p {
+  max-width: 500px;
+  font-size: 1rem;
+  color: #d1d1d1;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+  background: #1c1c3a;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px #000;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.project-card p {
+  margin: 0 1rem 1rem;
+  color: #d3d3d3;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.8rem;
+  background: #1a1a3a;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+form button {
+  padding: 0.8rem;
+  background: #8f5eff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #a983ff;
+}
+
+/* Back to Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #8f5eff;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+
+#topBtn:hover {
+  background-color: #a983ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Additional Projects Styling */
+.more-projects {
+  padding: 4rem 10%;
+  background: #121232;
+}
+
+.more-projects .project {
+  background-color: #1c1c3a;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.more-projects .project:hover {
+  transform: translateY(-5px);
+}
+
+.more-projects .project h3 {
+  margin-bottom: 0.5rem;
+  color: #8f5eff;
+}
+
+/* Certifications Section */
+.experience {
+  padding: 4rem 10%;
+  background-color: #0a0a23;
+}
+
+.experience h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #8f5eff;
+  margin-bottom: 2rem;
+}
+
+.experience-item {
+  background-color: #1c1c3a;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.experience-item h3 {
+  color: #8f5eff;
+  margin-bottom: 0.4rem;
+}
+
+.experience-item p {
+  color: #ccc;
+}
